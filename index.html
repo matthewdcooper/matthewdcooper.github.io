@@ -11,12 +11,26 @@
 				border-left: solid black 2px;
 				border-bottom: dotted black 1px;
 			}
+			
+			canvas {
+		    margin: 0;
+		    padding: 0;
+		    position: fixed;
+		    touch-action: none;
+		    width: calc(100% - 2px); /* for borders */
+		    height: calc(100% - 2px); /* for borders */
+		    border: 1px dashed;
+		    top:0;
+		    left:0;
+		    z-index: -1;
+			}
 		
 		</style>
 	
 	</head>
 
 	<body>
+		<canvas width=80% height="300px"></canvas>
 		<div id='hw'>
 			<p>hello, world</p>
 			
@@ -30,6 +44,10 @@
 		</div>
 		
 		<hr>
+		
+		<a>don't click<a>
+		
+		<a>click</a>
 		
 		
 	</body>
