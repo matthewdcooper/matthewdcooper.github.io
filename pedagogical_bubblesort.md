@@ -47,4 +47,65 @@ That which is most useful from an education in any given subject ought not to be
 
 It is not self-evident that there can be a correct algorithm that is inefficient. Who hasn't observed the naive programmer who, after solving a problem, sits back and declares his work finished? Many students learning to program are satisfied once the program they have written generates the correct output. Learning that you can be correct and impractical is an important lesson that not everybody learns.
 
-  
+```
+def swap(L, i, j):
+  tmp = L[i]
+  L[i] = L[j]
+  L[j] = tmp
+
+def bubblesort(L):
+  swapped = True
+  while swapped:
+    swapped = False
+      for i in range(1, len(L)):
+        if L[i-1] > L[i]:
+	  swap(L, i-1, i)
+          swapped = True
+```
+
+What are the concepts a student requires to understand bubblesort?
+
+- variables and assignment
+- functions/methods
+- booleans, flags
+- arrays (or lists)
+- loops (while and for)
+- iterable
+- indexing
+- branching
+
+they should probably also have a rough mental model of memory
+algorithmic thinking
+
+Possibly a better thing to consider would be what would a student need to understand in order for them to convert an English language description of bubblesort into functioning code?
+
+1. Take a list or orderable items. For example: [1, 3, 2, 5, 8, 4]
+2. Go through the list comparing each value to its immediate successor.
+3. If ever the value and its successor are seen to be out of order (eg. 3, 2) swap them around, make a note that the swap happened, and continue on.
+4. Upon reaching the end of the list, if a swap happened, return to (2). Otherwise the list is sorted and we are done.
+
+Although the code is perhaps a better expression of the bubblesort algorithm itself, the above maybe makes it clearer what concepts a student must have.
+
+- the idea of order
+- a way of representing a set of items: a list or an array
+- the ability to examine an item in that list
+- the ability to write to a location on that list
+- the ability to compare two values and branch depending on them
+- keeping track of state (has a swap happened)
+- doing something repeatedly until a desired state has been achieved
+
+
+
+Thus we derive a set of questions that determine a student's readiness to translate the English algorithm into code:
+
+1. Can you put the following into order: 132759?
+2. How would you represent the unsorted list above in Python?
+3. How do you access the 3rd element of that list? The n-th?
+4. How could you change the 4th element to 8?
+5. How would you swap two values? Say the 2nd and 5th? What about the i-th and j-th?
+6. How can you tell if the i-th and j-th values (assuming j > i) are in the proper order?
+7. How can you tell if the entire list is sorted or not?
+8. Can you randomly swap two values?
+9. Can you keep randomly swapping values until the list is sorted?
+10. Is there a better way of sorting a list than swapping the values at random?
+
