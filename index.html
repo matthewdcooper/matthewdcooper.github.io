@@ -2,6 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset='utf-8' />
+		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<title>Matthew D. Cooper</title>
 		<link rel='stylesheet' type='text/css' href='assets/style.css'>
 		<script src="assets/banner.js"></script>
@@ -9,11 +10,43 @@
 
 	<body onresize='drawBanner();'>
 		<header>
-			<h1>Matthew D. Cooper</h1>
+			<h1 id="title">Matthew D. Cooper</h1>
 			<canvas id="banner"></canvas>
 			<script defer>drawBanner();</script>
 		</header>
 
-	</body>
+		<nav id="nav">
+			<ul>
+				<li></li>
+			</ul>
+		</nav>
 
+
+		<article>
+<h2>2020-02-02</h2>
+<h1>In Defence of Teaching Bubble Sort</h1>
+<p><em>Bubble sort is a terribly inefficient and ugly algorithm. Teaching it could corrupt a beginner programmer's conception of best practices. Or, worse, damage their very understanding of what an algorithm is.</em></p>
+<p>Okay, yes: the above is a caricature of a position against bubble sort. Nonetheless, people really do hold the belief that inefficient algorithms should not be taught. Owen Astrachan <a href="https://users.cs.duke.edu/~ola/papers/bubble.pdf">argues</a> that bubble sort should "no longer be taught" because of:</p>
+<blockquote>
+<p>pedagogical assertions that code and algorithmic examples used in early courses should be of high quality and adhere to established best practices ... they should also exemplify best practices so that these practices endure after many of the details of a course have been forgotten. </p>
+</blockquote>
+<p>But why should students only consider well-written code? Is there no educational value in looking at something ugly and asking what is wrong with it? Are we really concerned that students who are exposed to bad code are destined to go out into the world and develop something equally sloppy?</p>
+<p>That seems patronising.</p>
+<p>Of course, if a student makes it through a course on algorithms, only ever having considered ugly ones, then something has gone terribly wrong. But a student who has looked at both beautiful and ugly algorithms, and who has thought about the differences between the two, will surely emerge with a better understanding of good code than the student who is coddled and told merely, 'Look! This is the way you should sort.'</p>
+<p>If the goal is simply to expose the student to algorithms, then bubble sort really is a bad choice. We might just as well show them something equally complex of much higher practical value: insertion sort, for instance. But mere exposure is not an admirable educational goal.</p>
+<p>Once a student has understood and can implement bubble sort, it would be amiss of us to leave off there and not make use of low hanging exercises in critical thinking. A reasonably apt student, once shown that bubble sort will continue to iterate over a sorted array, may well successfully answer the question, 'How can we make bubble sort better?'</p>
+<p>Could the same be done with quick sort?</p>
+<p>As well as guiding a student to figure out what is bad about bubble sort, and thus teaching them the valuable lesson that not all correct algorithms for a given problem are created equal, we can go a step further and ask: 'What redeeming qualities does bubble sort have?'</p>
+<p>Which other sorting algorithms allow us to sort an array using only the memory used by the array in question?</p>
+<p>We do not even need to stop there. We might also ask, 'Can you make bubble sort even worse than it already is? Slower? Can we make it use up more memory than is available in the universe and yet still be correct?'</p>
+<p>And in asking such questions, is it the case that the students are going to go out into the world and write algorithms that gobble up all the bytes?</p>
+<p>I don't think so—creating ugliness is a useful exercise in learning how to produce beauty.</p>
+<p>Astrachan asks:</p>
+<blockquote>
+<p>If students take only a few memories about sorting from a first course what do we want these memories to be? Should the phrase Bubble Sort be the first that springs to mind at the end of a course or several years later?</p>
+</blockquote>
+<p>If the lesson was a good one, from which all the ins-and-outs of bubble sort have long been forgotten, yet the student left having practiced skills that contributed to their aptitude for algorithmic thinking, then, sure, why should the student not only remember the phrase 'bubble sort'?</p>
+		</article>
+
+	</body>
 </html>
