@@ -1,7 +1,6 @@
 # In Defence of Teaching Bubble Sort
 
 ## 2020-02-02
-*(Happy Unviersal Palindrome Day!)*
 
 *Bubble sort is a terribly inefficient and ugly algorithm. Teaching it could corrupt a beginner programmer's conception of best practices. Or, worse, damage their very understanding of what an algorithm is.*
 

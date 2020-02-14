@@ -3,28 +3,29 @@
 	<head>
 		<meta charset='utf-8' />
 		<meta name="viewport" content="width=device-width,initial-scale=1">
-		<title>Matthew D. Cooper</title>
 		<link rel='stylesheet' type='text/css' href='assets/style.css'>
 		<script src="assets/banner.js"></script>
+		{% block head %}{% endblock %}
 	</head>
 
 	<body onresize='drawBanner();'>
+		{% block header %}
 		<header>
 			<h1 id="title">Matthew D. Cooper</h1>
 			<canvas id="banner"></canvas>
 			<script defer>drawBanner();</script>
 		</header>
+		{% endblock %}
 
+		{% block nav %}
 		<nav id="nav">
 			<ul>
 				<li></li>
 			</ul>
 		</nav>
+		{% endblock %}
 
-		<ul>
-			<li><a href='/blog/finding_direction_with_atan2.html'>Finding Direction with atan2</a></li>
-			<li><a href='/blog/in_defence_of_teaching_bubblesort.html'>In Defence of Teaching Bubblesort</a></li>
-		</ul>
+		{% block content %}{% endblock %}
 
 	</body>
 </html>
