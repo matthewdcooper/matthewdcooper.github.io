@@ -26,17 +26,17 @@
 			<h1>Finding Direction with atan2</h1>
 			<h2>2020-02-14</h2>
 			<p>We have a rover that landed on a planet at (0, 0). It has moved to (a, b) and is currently looking at a rock (a really very <em>interesting</em> rock) located at (c, d). </p>
-			<p><img alt="Rover/Rock diagram" src="" title="/assets/the_rover_and_the_rock.png" /></p>
+			<p><img alt="Rover/Rock diagram" src="/assets/the_rock_and_the_rover.png" /></p>
 			<p>How can we find the angle θ (in radians) that describes the direction the rover is currently facing?</p>
 			<p>We can start by somewhat arbitrarily defining θ to be 0 when the rover is facing due east, π/2 radians is north, -π/2 is south, and (-)π is west. So then in the case depicted above, θ is somewhere between π/2 and π radians. But obviously we'd like to be a bit more accurate than that.</p>
-			<p><img alt="Four Cardinal Rover Directions" src="" title="/assets/cardinal_rover_directions.png" /></p>
+			<p><img alt="Four Cardinal Rover Directions" src="/assets/cardinal_rover_directions.png" /></p>
 			<p>The first thing to do is to find the difference in x and y from the rover to the rock.</p>
 			<p>Easy enough: </p>
 			<p><pre><code>	x = c - a
 	y = d - b</code></pre></p>
 			<p>We now know that if the rover were to move east by x units and north by y units, it'd end up on top of the rock. It's worth noting that if x is negative, then the rover would actually need to go west. And, likewise, if y were negative then the rover would go south.</p>
 			<p>We can now usefully forget about the landing site altogether and think only about the relationship between the rover and the rock. We can do this with a right-angled triangle.</p>
-			<p><img alt="Right-angled Triangle" src="" title="/assets/the_rover_the_rock_and_their_triangle.png" /></p>
+			<p><img alt="Right-angled Triangle" src="/assets/the_rover_the_rock_and_their_triangle.png" /></p>
 			<p>Now we are ready to use a good old-fashioned bit of high school trigonometry to find our angle.</p>
 			<p><pre><code>	θ = atan(y/x)</code></pre></p>
 			<p>And we're done!</p>
